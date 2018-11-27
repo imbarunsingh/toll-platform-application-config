@@ -1,9 +1,16 @@
+---
 server:
   port: ${SERVER_PORT:8761}
 spring:
-  profiles: development
+  profile:
+    active: development
   application:
     name: discovery-service
+  rabbitmq: #Using RabbitMQ for Spring cloud bus. This config has to be in the bootstrap.yml
+    host: ${RABBITMQ_HOST:192.168.99.100} #RabbitMQ running as docker container
+    port: ${PORT:5672}
+    username: ${USERNAME:guest}
+    password: ${PASSWORD:guest}
 eureka:
   instance:
     hostname: localhost
@@ -16,3 +23,17 @@ eureka:
     waitTimeInMsWhenSyncEmpty: 0
   datacenter: Bangalore
   environment: Development
+#Enables all Actuator endpoints meant for monitoring,
+#e.g: localhost:8181/spring-cloud-config-client/actuator/metrics
+#Exposing 17 endpoint(s) beneath base path '/actuator' - See for this message in logs after applilcation start up to ensure actuator is enabled
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+#For Distributed Tracing using Spring Cloud Sleuth
+logging:
+  level:
+    root: INFO
+    org.springframework.cloud.sleuth: DEBUG
+    com.microservice: DEBUG
