@@ -6,6 +6,11 @@ spring:
     active: development
   application:
     name: discovery-service
+  rabbitmq:
+    host: ${RABBITMQ_HOST_DEV:192.168.99.100} #RabbitMQ running as docker container
+    port: ${RABBITMQ_PORT_DEV:5672}
+    username: ${RABBITMQ_USERNAME_DEV:guest}
+    password: ${RABBITMQ_PASSWORD_DEV:guest}
 eureka:
   instance:
     hostname: localhost
