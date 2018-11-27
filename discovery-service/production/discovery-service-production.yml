@@ -6,6 +6,11 @@ spring:
     active: production
   application:
     name: discovery-service
+  rabbitmq: #Using RabbitMQ for Spring cloud bus.
+    host: ${RABBITMQ_CLUSTER_PRODUCTION}
+    port: ${RABBITMQ_PORT_PRODUCTION}
+    username: ${RABBITMQ_USERNAME_PRODUCTION}
+    password: ${RABBITMQ_PASSWORD_PRODUCTION}
 eureka:
   instance:
     hostname: localhost

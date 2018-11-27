@@ -6,6 +6,11 @@ spring:
     active: Staging
   application:
     name: discovery-service
+  rabbitmq: #Using RabbitMQ for Spring cloud bus.
+    host: ${RABBITMQ_CLUSTER_STAGING}
+    port: ${RABBITMQ_PORT_STAGING}
+    username: ${RABBITMQ_USERNAME_STAGING}
+    password: ${RABBITMQ_PASSWORD_STAGING}
 eureka:
   instance:
     hostname: localhost
