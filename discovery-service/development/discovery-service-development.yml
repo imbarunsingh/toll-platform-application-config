@@ -6,11 +6,6 @@ spring:
     active: development
   application:
     name: discovery-service
-  rabbitmq: #Using RabbitMQ for Spring cloud bus. This config has to be in the bootstrap.yml
-    host: ${RABBITMQ_HOST:192.168.99.100} #RabbitMQ running as docker container
-    port: ${PORT:5672}
-    username: ${USERNAME:guest}
-    password: ${PASSWORD:guest}
 eureka:
   instance:
     hostname: localhost
