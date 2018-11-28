@@ -16,7 +16,7 @@ eureka:
     hostname: localhost
   client:
     serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: ${EUREKA_ZONE_URL_STAGING:http://localhost:8761/eureka/}
     registerWithEureka: false
     fetchRegistry: false
   server:
