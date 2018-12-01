@@ -3,7 +3,7 @@ server:
   port: ${SERVER_PORT_STAGING:0}
 spring:
   profile:
-    active: Staging
+    active: staging
   application:
     name: discovery-service
   rabbitmq: #Using RabbitMQ for Spring cloud bus.

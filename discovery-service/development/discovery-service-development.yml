@@ -1,11 +1,7 @@
 ---
 server:
   port: ${SERVER_PORT:8761}
-spring:
-  profile:
-    active: development
-  application:
-    name: discovery-service
+spring:  
   rabbitmq:
     host: ${RABBITMQ_HOST_DEV:192.168.99.100} #RabbitMQ running as docker container
     port: ${RABBITMQ_PORT_DEV:5672}
