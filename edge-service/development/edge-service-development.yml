@@ -1,5 +1,5 @@
 server:
-  port: ${SERVER_PORT:0}
+  port: ${SERVER_PORT:8080}
 spring:
   rabbitmq:
     host: ${RABBITMQ_HOST_DEV:192.168.99.100} #RabbitMQ running as docker container
