@@ -42,12 +42,20 @@ ribbon:
     enabled: true
 zuul:
   sensitive-headers: Cookie,Set-Cookie
+  zuul:
   ignored-services: "*" #To skip having a service automatically added, set zuul.ignored-services to a list of service id pattern
+  prefix: /toll-online #To add a prefix to all mappings.This is Global prefix
   routes:
-    toll-rate-service: /toll-rate/**
-    fast-pass-service: /fast-pass/**
+    toll-rate-web:
+      path: /toll-rate/**
+      serviceId: toll-rate-web
+      stripPrefix: false #switching off the stripping of the service-specific prefix from individual routes
+    fast-pass-web:
+      path: /fast-pass/**
+      serviceId: fast-pass-web
+      stripPrefix: false
   ignored-patterns:
-    "/toll-preview/toll-rate/admin" # Does not allow this path to be accessed.
+    "/toll-online/toll-rate/admin" # Does not allow this path to be accessed.
 #Actuator Endpoint config
 management:
   endpoints:
