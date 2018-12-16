@@ -1,5 +1,18 @@
+security:
+  oauth2:
+    client:
+      client-id: '{cipher}AgBFzjykjOU8mxkwTPs51Jzo4aoKqGreiZHf+7diymjjYe5i1nDkSrriHN39Tat27NDEnzomCLpBst4ZruhEpkaYZqaFp+IifL5BeCG3KkXyhOux3EqK3sBNRJC8BKWqoH+LalXCeohmnD999MQKibPN9AdKEEDkY/LqnMQw2yueMhn+OjTLPvJzXkdsU7pyPC8tDhVsSnPrMTrpg0mIC6L13A7Br4dc5ute/8LK742xi5eE8whyn8Wt4+MElWgCdf4U3oKK77hFr1lbQzkK9iP430BtvVhmHsP2yWwRoTHtU5jF8jqpqNBwJaIh6jURZkb6oBRrdC5BfO0etCMrVmLTBi9iLfBKy+DoKXsfMZpMqZDLuL2cGg4vBIeumNmjSDNhH03/tyLbgu059Ix7H8iXFAj4MyA5gR6YHEp+ndacLaK5UcX3Afasb6k4i8QSTCJ/psfQJoRxSOYKRGVFvkgHpVSurBE5DYpec/yhF4poeXH7blHDKkMCekx/SeqBkfobS1N80Lg1roEm+Hi9qUNIEYziXQK6FFVj8w7L+1k4rfU+nTC6YlmwP/HOKXentSAfcZzv9Lopv/gUFNY8gJjyfMO+2wlTbFEIQ+TpxxvRnH3TU7VNCeCrBALaB+vb7eqPsa5lnVrkSMHayGEZqqH15OV14FNCbOWkU8JQ1HtJy0sJv7yNmWXN/KdWXlRvvR+f9MYIrxtH8s1O/Ry6Rr52v7+8pp8oV28dldVU1X6i5Q=='
+      client-secret: '{cipher}AgBBrLdfogB1xLU7HJTnBNiHko9NxrMJcQz0Sn9Wd/6VOnBG7b/4gDTZfH7QHKSOOnKgpRXEDk+PR8IKXoULfs6TU2iCAPQ+osusPfjerUi8Cf5fF/mGznyA5Ui1T2x3yW+bMTeE46qSPee+wreVjjHiahUaFbfgEAgH+9ma0eWmBIgMD2EU27uwvkG0itaA9FW0kHdg+s44ZiAWD9vbiQzfCNTvZY//Hw9iM3mbB14anqkCWKz3dP1F9c+AQ0lvgbnLYYBRtXy0QetPKVt1rrcmv7ZBtd4MlIs5iXnMKqJ6ovtdtXQI92SZDPLNkVKCJaXdmmwsT+npcR4qaAxJOgYBQj0LbLtlKmKcG2QkQ9U72wEc5i9G9SjSt7UOSOTjBT0Vg8mE+wp4suIqovF6DjWs42iHnUjRqeeD9xE7SOhOIG6/9SsIhsgW+toJLI3Xnml3CDbkPHKE8Fe5uR/gMX2LOtNfeYZC1dRk+nlL2kOIR8b5jjTiMmBmxRaKWeABpx/x66GB2pXY5b9slKtIm0uy/zsob/cCzaDpv/dY5jcPXZb81+HLQp3XMWbzfOR5nhAAOF/DFwyHmqyrHhRUTiHWWXfRgBNa+mzT3H4/Tq7mfMh10AeU33SP/rLZyJ5G5WC1f1yWHyam3iXnH9UKUvurs4CtMdao0qbqQw1pgBuub2flo3OYC9oxlnUHNvzBFVYrA6ncOhxCYAUhf1+5cpwzZdTYv5POQPLLpzmv+1lYdzqWvYHTwVoAUf9qTBPI48g='
+      access-token-uri: https://dev-343895.oktapreview.com/oauth2/default/v1/token
+      user-authorization-uri: https://dev-343895.oktapreview.com/oauth2/default/v1/authorize
+      scope:
+      - 'openid'
+      - 'profile'
+      - 'email'
+    resource:
+      user-info-uri: https://dev-343895.oktapreview.com/oauth2/default/v1/userinfo
 server:
-  port: ${SERVER_PORT:8080}
+  port: ${SERVER_PORT:8081}
 spring:
   rabbitmq: #Using RabbitMQ for Spring cloud bus.
     host: '{cipher}AgCUXmhW2gCzd0JfK1uvXUW38OSZPohP2R30Tb0zQlbgIKsDpDyQkOh8c4qF0PWAbnBqyMLL9bnopR2LIeT2XSgS7H8R0xoj6UcE0l2raEPKU4zgp4z24xX5eHePL5/Ql2ysCl83wrFshWwTCI/hJSYRo30vnPgCxvGDfYj6kBFaTRgUUVNzeJ/iyGbRoLgmp1zEcdmv37s7Rtky3KiHHYX+GSOpbFoUDoXnihuQPTXoMYtn0SNlQwW8onJA1H4DLhmEMB7SZEX4A+LjEDae4SGcKX2SkGU0OomWKXQedhhuF/65l4zqaJI4H/XmNy7bsxZdZ5G3YkhqwFWcW7ORtFgrzjE4BdULshYfkG4NMRONQ0lx8BRNTkft/Ya/0IAAcQ2PrsxTrf7tmEtpI7JA+SI0lY9aW59EkKMBTNGbFwKzpVHFR15LGZGd1NVjDye1kZI3oPfvr+eeKWYRm3pGb9gDFN2eWVDNSbjpM4bArJolxtE+hf9Fnp/A25IxJVjNSyMWf2WeMmvHW2wiob9U0L/Z9bwUao/n6eVQ10FBo6slv/epQaFoJxw6EM1b77MBCoXpbZVSaAnhAtwzxgnBmysvBiIuCk6W0imq2immkQZIm+LD/19RWxqJtGPy8T0n4MplzptJzsg9gwQTdHhPN6vgqaMocH1prmtG+0sKOFR56V8BJ9Zuz43uQhVhBthaoFfjwcKrL2pO5FH4NJr2ClmD'
@@ -20,25 +33,23 @@ eureka:
       instance-id: ${spring.application.name}:${random.int[1,99]}
       hostname: localhost
 hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 60000
+hystrix:
+  shareSecurityContext: true
 ribbon:
   ConnectTimeout: 3000
   ReadTimeout: 60000
   eureka:
     enabled: true
 zuul:
+  sensitive-headers: Cookie,Set-Cookie
   ignored-services: "*" #To skip having a service automatically added, set zuul.ignored-services to a list of service id pattern
-  prefix: /toll-system #To add a prefix to all mappings.This is Global prefix
+  prefix: /toll-online #To add a prefix to all mappings.This is Global prefix
+  stripPrefix: false
   routes:
-    toll-rate-web:
-      path: /toll-rate/**
-      serviceId: toll-rate-web
-      stripPrefix: false #switching off the stripping of the service-specific prefix from individual routes
-    fast-pass-web:
-      path: /fast-pass/**
-      serviceId: fast-pass-web
-      stripPrefix: false
+    toll-rate-service: /toll-rate/**
+    fast-pass-service: /fast-pass/**
   ignored-patterns:
-    "/toll-system/toll-rate/admin" # Does not allow this path to be accessed.
+    "/toll-preview/toll-rate/admin" # Does not allow this path to be accessed.
 #Actuator Endpoint config
 management:
   endpoints:
