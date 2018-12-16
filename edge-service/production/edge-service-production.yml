@@ -43,8 +43,6 @@ ribbon:
 zuul:
   sensitive-headers: Cookie,Set-Cookie
   ignored-services: "*" #To skip having a service automatically added, set zuul.ignored-services to a list of service id pattern
-  prefix: /toll-online #To add a prefix to all mappings.This is Global prefix
-  stripPrefix: false
   routes:
     toll-rate-service: /toll-rate/**
     fast-pass-service: /fast-pass/**
