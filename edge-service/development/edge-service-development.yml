@@ -52,10 +52,6 @@ zuul:
       stripPrefix: false
   ignored-patterns:
     "/toll-system/toll-rate/admin" # Does not allow this path to be accessed.
-hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 60000
-ribbon:
-  ConnectTimeout: 3000
-  ReadTimeout: 60000
 #Actuator Endpoint config
 management:
   endpoints:

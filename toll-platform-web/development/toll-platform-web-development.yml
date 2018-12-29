@@ -36,6 +36,12 @@ ribbon:
   ReadTimeout: 60000
   eureka:
     enabled: true
+#To get Hystrix aware of the security context,
+feign:
+  hystrix:
+    enabled: true
+hystrix:
+  shareSecurityContext: true
 #Actuator Endpoint config
 management:
   endpoints:
