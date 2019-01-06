@@ -45,9 +45,9 @@ zuul:
     toll-rate-web:
       path: /toll-web/**
       serviceId: toll-platform-web
-      stripPrefix: false # switching service-specific prefix in individual routes
+      stripPrefix: true # switching service-specific prefix in individual routes
   ignored-patterns:
-    "/toll-platform/toll-web/admin" # Does not allow this path to be accessed.
+    "/toll-platform/toll-platform-web/toll-web/admin" # Does not allow this path to be accessed.
 #Actuator Endpoint config
 management:
   endpoints:
