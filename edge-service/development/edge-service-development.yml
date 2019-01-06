@@ -43,10 +43,10 @@ zuul:
   #prefix: /toll-platform #To add a prefix to all mappings.This is Global prefix
   routes:
     toll-platform-web:
-      prefix: toll-platform-web
+      #prefix: toll-platform-web
       path: /toll-web/**
       serviceId: toll-platform-web
-      stripPrefix: false # switching service-specific prefix in individual routes
+      #stripPrefix: true # switching service-specific prefix in individual routes
   ignored-patterns:
     "/toll-platform/toll-platform-web/toll-web/admin" # Does not allow this path to be accessed.
 #Actuator Endpoint config
