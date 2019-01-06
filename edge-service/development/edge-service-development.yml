@@ -43,13 +43,9 @@ zuul:
   prefix: /toll-system #To add a prefix to all mappings.This is Global prefix
   routes:
     toll-rate-web:
-      path: /toll-rate/**
-      serviceId: toll-rate-web
+      path: /toll-platform/**
+      serviceId: toll-platform-web
       stripPrefix: false #switching off the stripping of the service-specific prefix from individual routes
-    fast-pass-web:
-      path: /fast-pass/**
-      serviceId: fast-pass-web
-      stripPrefix: false
   ignored-patterns:
     "/toll-system/toll-rate/admin" # Does not allow this path to be accessed.
 #Actuator Endpoint config
