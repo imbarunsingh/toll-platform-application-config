@@ -30,7 +30,7 @@ eureka:
       # are ${spring.application.name}, and ${server.port}, respectively and is suffice for production
       instance-id: ${spring.application.name}:${random.int[1,99]}
       hostname: localhost
-hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 60000
+hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 126000
 ribbon:
   ConnectTimeout: 3000
   ReadTimeout: 60000
