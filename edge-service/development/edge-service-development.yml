@@ -40,14 +40,14 @@ ribbon:
     enabled: true
 zuul:
   ignored-services: "*" #To skip having a service automatically added, set zuul.ignored-services to a list of service id pattern
-  #prefix: /toll-platform #To add a prefix to all mappings.This is Global prefix
+  #prefix: /toll-system #To add a prefix to all mappings.This is Global prefix
   routes:
     toll-platform-web:      
       path: /toll-platform-web/**
       serviceId: toll-platform-web
-      stripPrefix: true
+      stripPrefix: false
   ignored-patterns:
-    "/toll-platform/toll-platform-web/toll-web/admin" # Does not allow this path to be accessed.
+    "/toll-platform-web/toll-web/admin" # Does not allow this path to be accessed.
 #Actuator Endpoint config
 management:
   endpoints:
