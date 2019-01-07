@@ -13,6 +13,8 @@ security:
       user-info-uri: https://dev-343895.oktapreview.com/oauth2/default/v1/userinfo
 server:
   port: ${SERVER_PORT:0}
+  servlet:
+    context-path: ${CONTEXT_PATH:/toll-platform-web}  
 spring:
   rabbitmq: #Using RabbitMQ for Spring cloud bus.
     host: '{cipher}AgCUXmhW2gCzd0JfK1uvXUW38OSZPohP2R30Tb0zQlbgIKsDpDyQkOh8c4qF0PWAbnBqyMLL9bnopR2LIeT2XSgS7H8R0xoj6UcE0l2raEPKU4zgp4z24xX5eHePL5/Ql2ysCl83wrFshWwTCI/hJSYRo30vnPgCxvGDfYj6kBFaTRgUUVNzeJ/iyGbRoLgmp1zEcdmv37s7Rtky3KiHHYX+GSOpbFoUDoXnihuQPTXoMYtn0SNlQwW8onJA1H4DLhmEMB7SZEX4A+LjEDae4SGcKX2SkGU0OomWKXQedhhuF/65l4zqaJI4H/XmNy7bsxZdZ5G3YkhqwFWcW7ORtFgrzjE4BdULshYfkG4NMRONQ0lx8BRNTkft/Ya/0IAAcQ2PrsxTrf7tmEtpI7JA+SI0lY9aW59EkKMBTNGbFwKzpVHFR15LGZGd1NVjDye1kZI3oPfvr+eeKWYRm3pGb9gDFN2eWVDNSbjpM4bArJolxtE+hf9Fnp/A25IxJVjNSyMWf2WeMmvHW2wiob9U0L/Z9bwUao/n6eVQ10FBo6slv/epQaFoJxw6EM1b77MBCoXpbZVSaAnhAtwzxgnBmysvBiIuCk6W0imq2immkQZIm+LD/19RWxqJtGPy8T0n4MplzptJzsg9gwQTdHhPN6vgqaMocH1prmtG+0sKOFR56V8BJ9Zuz43uQhVhBthaoFfjwcKrL2pO5FH4NJr2ClmD'
@@ -51,4 +53,4 @@ logging:
     org.springframework.cloud.sleuth: ERROR
     com.microservice: ERROR
   pattern:
-    console: ${CONSOLE_LOG_PATTERN:%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){faint} %clr(${LOG_LEVEL_PATTERN:%5p}) %clr(${PID}){magenta} %clr(---){faint} %clr([${spring.application.name}]){blue} %clr([%15.15t]){faint} %clr(%-40.40logger{39}){cyan} %clr(:){faint} %m%n${LOG_EXCEPTION_CONVERSION_WORD:%wEx}}
+    console: ${CONSOLE_LOG_PATTERN:%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){faint} %clr(${LOG_LEVEL_PATTERN:%5p}) %clr(${PID}){magenta} %clr(---){faint} %clr([%15.15t]){faint} %clr(%-40.40logger{39}){cyan} %clr(:){faint} %m%n${LOG_EXCEPTION_CONVERSION_WORD:%wEx}}

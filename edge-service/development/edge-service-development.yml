@@ -45,7 +45,7 @@ zuul:
     toll-platform-web:      
       path: /toll-web/**
       serviceId: toll-platform-web
-      stripPrefix: false # switching service-specific prefix in individual routes
+     #stripPrefix: false
   ignored-patterns:
     "/toll-platform/toll-platform-web/toll-web/admin" # Does not allow this path to be accessed.
 #Actuator Endpoint config
@@ -61,4 +61,4 @@ logging:
     org.springframework.cloud.sleuth: ERROR
     com.microservice: DEBUG
   pattern:
-    console: ${CONSOLE_LOG_PATTERN:%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){faint} %clr(${LOG_LEVEL_PATTERN:%5p}) %clr(${PID}){magenta} %clr(---){faint} %clr([${spring.application.name}]){blue} %clr([%15.15t]){faint} %clr(%-40.40logger{39}){cyan} %clr(:){faint} %m%n${LOG_EXCEPTION_CONVERSION_WORD:%wEx}}
+    console: ${CONSOLE_LOG_PATTERN:%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){faint} %clr(${LOG_LEVEL_PATTERN:%5p}) %clr(${PID}){magenta} %clr(---){faint} %clr([%15.15t]){faint} %clr(%-40.40logger{39}){cyan} %clr(:){faint} %m%n${LOG_EXCEPTION_CONVERSION_WORD:%wEx}}
