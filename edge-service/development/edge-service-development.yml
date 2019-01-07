@@ -45,7 +45,7 @@ zuul:
     toll-platform-web:      
       path: /toll-platform-web/**
       serviceId: toll-platform-web
-     #stripPrefix: false
+      stripPrefix: true
   ignored-patterns:
     "/toll-platform/toll-platform-web/toll-web/admin" # Does not allow this path to be accessed.
 #Actuator Endpoint config
