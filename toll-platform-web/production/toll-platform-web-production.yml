@@ -46,11 +46,13 @@ management:
     web:
       exposure:
         include: ${ACTUATOR_ENDPOINTS:health,info,hystrix.stream}
-#For Distributed Tracing using Spring Cloud Sleuth
+#For Distributed Tracing using Spring Cloud Sleuth and log level config
 logging:
   level:
     root: ERROR
     org.springframework.cloud.sleuth: ERROR
+    org.springframework.boot.autoconfigure: ERROR
+    org.springframework.boot.devtools: WARN
     com.microservice: ERROR
   pattern:
     console: ${CONSOLE_LOG_PATTERN:%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){faint} %clr(${LOG_LEVEL_PATTERN:%5p}) %clr(${PID}){magenta} %clr(---){faint} %clr([%15.15t]){faint} %clr(%-40.40logger{39}){cyan} %clr(:){faint} %m%n${LOG_EXCEPTION_CONVERSION_WORD:%wEx}}
