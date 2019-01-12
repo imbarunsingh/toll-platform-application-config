@@ -44,7 +44,8 @@ zuul:
   routes:
     toll-platform-web:
       path: /toll-platform-web/**
-      serviceId: toll-platform-web 
+      serviceId: toll-platform-web
+      sensitive-headers:      
       stripPrefix: false     
   ignored-patterns:
     "/toll-platform-web/toll-web/admin" # Does not allow this path to be accessed.
