@@ -33,6 +33,12 @@ eureka:
       instance-id: ${spring.application.name}:${random.int[1,99]}
       hostname: localhost
 hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 126000
+#In order to get Hystrix aware of the security context, 
+hystrix:
+  shareSecurityContext: true
+feign:
+  hystrix:
+    enabled: true
 ribbon:
   ConnectTimeout: 3000
   ReadTimeout: 60000
