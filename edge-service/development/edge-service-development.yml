@@ -23,6 +23,8 @@ spring:
 eureka:
   client:
     register-with-eureka: true
+    username: configurationUser #Basic Auth Credentials
+    password: ${SECURITY_USER_PASSWORD:GbVx74Gp6cmEQnUcyNQKcCVu5NUfpx5K}
     fetch-registry: true
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
@@ -44,7 +46,6 @@ ribbon:
   ReadTimeout: 60000
   eureka:
     enabled: true
-
 zuul:
   ignored-services: "*" #To skip having a service automatically added, set zuul.ignored-services to a list of service id pattern
   #prefix: /toll-system #To add a prefix to all mappings.This is Global prefix
