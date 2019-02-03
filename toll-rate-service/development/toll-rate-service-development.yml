@@ -32,6 +32,7 @@ eureka:
       # are ${spring.application.name}, and ${server.port}, respectively and is suffice for production
       instance-id: ${spring.application.name}:${random.value}     
       preferIpAddress: true
+      hostname: localhost
 #Actuator Endpoint config
 management:
   endpoints:
