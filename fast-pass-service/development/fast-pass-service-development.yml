@@ -12,7 +12,7 @@ security:
     resource:
       user-info-uri: https://dev-343895.oktapreview.com/oauth2/default/v1/userinfo
 server:
-  port: ${SERVER_PORT:0}
+  port: ${SERVER_PORT:9096}
 spring:
   rabbitmq:
     host: ${RABBITMQ_HOST_DEV:172.17.0.2} #RabbitMQ running as docker container
