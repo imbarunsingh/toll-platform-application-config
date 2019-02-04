@@ -2,7 +2,7 @@ server:
   port: ${SERVER_PORT:9091}
 spring:
   rabbitmq:
-    host: ${RABBITMQ_HOST_DEV:172.17.0.2} #RabbitMQ running as docker container
+    host: ${RABBITMQ_HOST_DEV:toll-platform-rabbit-mq} #RabbitMQ running as docker container
     port: ${RABBITMQ_PORT_DEV:5672}
     username: ${RABBITMQ_USERNAME_DEV:guest}
     password: ${RABBITMQ_PASSWORD_DEV:guest}
@@ -18,8 +18,7 @@ eureka:
       # By Default, The default application name (that is, the service ID),
       # are ${spring.application.name}, and ${server.port}, respectively and is suffice for production
       instance-id: ${spring.application.name}:${random.value}
-      #hostname: localhost
-      preferIpAddress: true
+      hostname: localhost
 #For Distributed Tracing using Spring Cloud Sleuth and log level config
 logging:
   level:
