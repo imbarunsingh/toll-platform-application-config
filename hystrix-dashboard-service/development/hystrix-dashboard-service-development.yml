@@ -18,7 +18,8 @@ eureka:
       # By Default, The default application name (that is, the service ID),
       # are ${spring.application.name}, and ${server.port}, respectively and is suffice for production
       instance-id: ${spring.application.name}:${random.value}
-      hostname: localhost
+      #hostname: localhost
+      preferIpAddress: true
 #For Distributed Tracing using Spring Cloud Sleuth and log level config
 logging:
   level:
