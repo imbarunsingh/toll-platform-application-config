@@ -9,7 +9,7 @@ spring:
     password: ${RABBITMQ_PASSWORD_DEV:guest}
 eureka:
   instance:
-    hostname: ${EUREKA_HOST:toll-platform-discovery-service}
+    hostname: localhost
   server:
     enableSelfPreservation: false
   client:
