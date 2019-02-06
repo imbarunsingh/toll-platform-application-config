@@ -12,7 +12,7 @@ security:
     resource:
       user-info-uri: https://dev-343895.oktapreview.com/oauth2/default/v1/userinfo
 server:
-  port: ${SERVER_PORT:9095}
+  port: ${SERVER_PORT:0}
   servlet:
     context-path: ${CONTEXT_PATH:/toll-platform-web}
 spring:
@@ -33,7 +33,7 @@ eureka:
       # By Default, The default application name (that is, the service ID),
       # are ${spring.application.name}, and ${server.port}, respectively and is suffice for production
       instance-id: ${spring.application.name}:${random.value}
-      hostname: toll-platform-web-service
+      preferIpAddress: true
 hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 126000
 ribbon:
   ConnectTimeout: 3000

@@ -10,6 +10,8 @@ spring:
 eureka:
   instance:
     hostname: ${EUREKA_HOST:toll-platform-discovery-service}
+  server:
+    enableSelfPreservation: false
   client:
     serviceUrl:      
       defaultZone: ${EUREKA_ZONE_URL:http://${eureka.instance.hostname}:${server.port}/eureka/}

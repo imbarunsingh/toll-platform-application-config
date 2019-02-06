@@ -12,7 +12,7 @@ security:
     resource:
       user-info-uri: https://dev-343895.oktapreview.com/oauth2/default/v1/userinfo
 server:
-  port: ${SERVER_PORT:9094}
+  port: ${SERVER_PORT:0}
 spring:
   rabbitmq:
     host: ${RABBITMQ_HOST_DEV:toll-platform-rabbit-mq} #RabbitMQ running as docker container. toll-platform-rabbit-mq is DNS name(hostname) for container and for the same host file entry on windows is also needed.
@@ -31,7 +31,7 @@ eureka:
       # By Default, The default application name (that is, the service ID),
       # are ${spring.application.name}, and ${server.port}, respectively and is suffice for production
       instance-id: ${spring.application.name}:${random.value}
-      hostname: toll-platform-toll-rate-service
+      preferIpAddress: true
 #Actuator Endpoint config
 management:
   endpoints:
