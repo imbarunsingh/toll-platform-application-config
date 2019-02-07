@@ -1,5 +1,5 @@
 server:
-  port: ${SERVER_PORT:9092}
+  port: ${SERVER_PORT:9093}
 spring:
   rabbitmq:
     host: ${RABBITMQ_HOST_DEV:172.17.0.2} #RabbitMQ running as docker container
@@ -24,7 +24,7 @@ logging:
   level:
     root: ${LOG_LEVEL:INFO}
     org.springframework.cloud.sleuth: ${LOG_LEVEL:ERROR}
-    org.springframework.boot.autoconfigure: ERROR 
+    org.springframework.boot.autoconfigure: ERROR
     org.springframework.boot.devtools: WARN
     com.microservice: ${LOG_LEVEL:INFO}
   pattern:
