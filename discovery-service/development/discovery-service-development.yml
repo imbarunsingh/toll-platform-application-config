@@ -18,8 +18,7 @@ eureka:
     registerWithEureka: false
     fetchRegistry: false
   server:
-    enableSelfPreservation: false
-    eviction-interval-timer-in-ms: 60 * 1000 #A scheduler is run at this frequency which will evict instances from the registry if the lease of the instances are expired as configured by lease-expiration-duration-in-second
+    enableSelfPreservation: false    
     waitTimeInMsWhenSyncEmpty: 0
   datacenter: Bangalore
   environment: Development
