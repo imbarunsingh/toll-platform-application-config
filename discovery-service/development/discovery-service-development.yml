@@ -9,7 +9,7 @@ spring:
     password: ${RABBITMQ_PASSWORD_DEV:guest}
 eureka:
   instance:
-    hostname: localhost
+    hostname: ${EUREKA_HOST:toll-platform-discovery-service}
   client:
     serviceUrl:      
       defaultZone: ${EUREKA_ZONE_URL:http://${eureka.instance.hostname}:${server.port}/eureka/}
