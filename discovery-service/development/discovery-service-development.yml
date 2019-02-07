@@ -9,9 +9,8 @@ spring:
     password: ${RABBITMQ_PASSWORD_DEV:guest}
 eureka:
   instance:
-    lease-renewal-interval-in-seconds: 30 #Not advisable to change this value since self-preservation assumes that heartbeats are always received at intervals of 30 seconds
-    lease-expiration-duration-in-seconds: 90 #Indicates the duration the server waits since it received the last heartbeat before it can evict an instance from its registry.This value should be greater than lease-renewal-interval-in-seconds.Setting this value too small could make the system intolerable to temporary network glitches.
-    eureka.server.eviction-interval-timer-in-ms: 60 * 1000 #A scheduler is run at this frequency which will evict instances from the registry if the lease of the instances are expired as configured by lease-expiration-duration-in-second
+    leaseRenewalIntervalInSeconds: 30 #Not advisable to change this value since self-preservation assumes that heartbeats are always received at intervals of 30 seconds
+    leaseExpirationDurationInSeconds: 90 #Indicates the duration the server waits since it received the last heartbeat before it can evict an instance from its registry.This value should be greater than lease-renewal-interval-in-seconds.Setting this value too small could make the system intolerable to temporary network glitches.    
     hostname: ${EUREKA_HOST:toll-platform-discovery-service}
   client:
     serviceUrl:      
@@ -19,7 +18,8 @@ eureka:
     registerWithEureka: false
     fetchRegistry: false
   server:
-    enable-self-preservation: true
+    enableSelfPreservation: false
+    eviction-interval-timer-in-ms: 60 * 1000 #A scheduler is run at this frequency which will evict instances from the registry if the lease of the instances are expired as configured by lease-expiration-duration-in-second
     waitTimeInMsWhenSyncEmpty: 0
   datacenter: Bangalore
   environment: Development
