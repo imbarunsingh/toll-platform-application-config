@@ -11,7 +11,7 @@ eureka:
   instance:
     hostname: localhost
   server:
-    enableSelfPreservation: false
+    enable-self-preservation: false
   client:
     serviceUrl:      
       defaultZone: ${EUREKA_ZONE_URL:http://${eureka.instance.hostname}:${server.port}/eureka/}
