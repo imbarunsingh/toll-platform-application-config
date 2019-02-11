@@ -31,7 +31,7 @@ eureka:
       # By Default, The default application name (that is, the service ID),
       # are ${spring.application.name}, and ${server.port}, respectively and is suffice for production
       instance-id: ${spring.application.name}:${random.value}
-      hostname: localhost
+      preferIpAddress: true
 hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 126000
 #In order to get Hystrix aware of the security context, 
 hystrix:
@@ -61,7 +61,7 @@ management:
   endpoints:
     web:
       exposure:
-        include: ${ACTUATOR_ENDPOINTS:health,info,hystrix.stream}
+        include: "*"
 #For Distributed Tracing using Spring Cloud Sleuth and log level config
 logging:
   level:

@@ -19,6 +19,12 @@ eureka:
       # are ${spring.application.name}, and ${server.port}, respectively and is suffice for production
       instance-id: ${spring.application.name}:${random.value}
       preferIpAddress: true
+#Actuator Endpoint config
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
 #For Distributed Tracing using Spring Cloud Sleuth and log level config
 logging:
   level:

@@ -37,7 +37,7 @@ management:
   endpoints:
     web:
       exposure:
-        include: ${ACTUATOR_ENDPOINTS:health,info,hystrix.stream}
+        include: "*"
 #For Distributed Tracing using Spring Cloud Sleuth and log level config
 logging:
   level:
