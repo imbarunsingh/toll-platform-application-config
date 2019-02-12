@@ -15,7 +15,7 @@ server:
   port: ${SERVER_PORT:8080}
 spring:
   rabbitmq:
-    host: ${RABBITMQ_HOST_DEV:toll-platform-rabbit-mq} #RabbitMQ running as docker container. toll-platform-rabbit-mq is DNS name(hostname) for container and for the same host file entry on windows is also needed.
+    host: ${RABBITMQ_HOST_DEV:toll-platform-rabbitmq} #RabbitMQ running as docker container. toll-platform-rabbit-mq is DNS name(hostname) for container and for the same host file entry on windows is also needed.
     port: ${RABBITMQ_PORT_DEV:5672}
     username: ${RABBITMQ_USERNAME_DEV:guest}
     password: ${RABBITMQ_PASSWORD_DEV:guest}
