@@ -30,19 +30,6 @@ spring:
           enabled: true #Whether publishing retries are enabled when direct listener is used.
     connection-timeout:
       zero: true #Set it to zero to wait forever.
-#Eureka Service registry Configuration
-eureka:
-  client:
-    register-with-eureka: true
-    fetch-registry: true
-    serviceUrl:
-      defaultZone: '{cipher}AgCAJ0wBTuzRZRFHp72cOSUL0gwL/+0Dq9+w7EMCVjG3agx+2lFerLw/RAlgMw8Gb7z+p1XLMTNbRBJptRTjItFuGB+RRJgVDd338+s/3yqx7vPEmgxtGsqPV0gAgv0p+Sz+MpcVA+rcIZwERFHjBo7iRDEOrHpQNFXGegTBVy/ui+0LIz428AwpEIvBdRxTb0VdZMB2E6tayuU4fFlbVP/SFhHKeoi+bdJdywcMMFyCrfwIs8TAGlnmk12EfOIqb6PQcOiFD+8YvDn7lHJdke1FXBCoQ97ZSyZsZlWYeXKby5TRE9kW7bYoTVPv8ZWxTEohRk4RU+VXBuw8PUq5f/1PgvQyO0elasbz37yfmQQRnBBuvZucSrXW3pfSC4Cr1qsxMJV7c7DTH5ZqWe88i8pTYUGnEBB+ZOknJiiMBHh41ZmDmC6qsG0czdKpQeYir1ebXWAcnevJwz9iDV3gj2JneZ+H2er35qcLAGIcSvjTU8a1ln4unl0cju7C0Ur2826rDvDoTslmhSWH/VYXMifAEt9bGjNC19j4gdeOtKoFYOu87Jxbf0/ga9Dtm0ijjQFLmA12CIdVv7LjH96NsQUmH6ENsLbBsjzstUqHGCTI6CcYlz6RU59iv5fIbFC7NSfXaanfQHngEiwTU5b51CzPB7Wbq8JQwYH8LBlhTIM6gQzwoEy81Md7oOLNe8ZtcbKrbBE31/q28W8pgLlWQojDBljQT2b1zf+zrsaeeAzoAejCyCKYkHU8EUc+ywSD0Ssby0QWZG8ME2b189LE8zax7HZ14uwT8mnY5w+RNYWt/CWefi7ig7Kr1LEHPzQPpTN4a6hhb1dCk7ChvFppNcs5X75DJEeBh58He/oVew+U9irFAfbQPFKUP2t5pjFKkMrddjtUBty9zObSZuxxGwaZSTknrS1OD0PSFsz/sK+FbA=='
-  instance:
-      # The default 'instance id' won't be unique if running on the same host and using 'server.port=0'
-      # By Default, The default application name (that is, the service ID),
-      # are ${spring.application.name}, and ${server.port}, respectively and is suffice for production
-      instance-id: ${spring.application.name}:${random.value}
-      preferIpAddress: true
 hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 126000
 ribbon:
   ConnectTimeout: 3000
