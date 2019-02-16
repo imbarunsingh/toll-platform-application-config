@@ -7,6 +7,17 @@ spring:
     port: ${RABBITMQ_PORT_DEV:5672}
     username: ${RABBITMQ_USERNAME_DEV:guest}
     password: ${RABBITMQ_PASSWORD_DEV:guest}
+    listener:
+      direct:
+        retry:
+          enabled: true #Whether publishing retries are enabled when direct listener is used.
+      simple:
+        max-concurrency: 8 #Maximum number of listener invoker threads.
+        retry:
+          max-attempts: 3 #Maximum number of listener invoker threads.
+          enabled: true #Whether publishing retries are enabled when direct listener is used.
+    connection-timeout:
+      zero: true #Set it to zero to wait forever.
 eureka:
   instance:
     leaseRenewalIntervalInSeconds: 30 #Not advisable to change this value since self-preservation assumes that heartbeats are always received at intervals of 30 seconds
