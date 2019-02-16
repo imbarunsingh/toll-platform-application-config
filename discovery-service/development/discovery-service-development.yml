@@ -18,21 +18,6 @@ spring:
           enabled: true #Whether publishing retries are enabled when direct listener is used.
     connection-timeout:
       zero: true #Set it to zero to wait forever.
-eureka:
-  instance:
-    leaseRenewalIntervalInSeconds: 30 #Not advisable to change this value since self-preservation assumes that heartbeats are always received at intervals of 30 seconds
-    leaseExpirationDurationInSeconds: 90 #Indicates the duration the server waits since it received the last heartbeat before it can evict an instance from its registry.This value should be greater than lease-renewal-interval-in-seconds.Setting this value too small could make the system intolerable to temporary network glitches.  
-    hostname: ${EUREKA_HOST:toll-platform-discovery-service}
-  client:
-    serviceUrl:      
-      defaultZone: ${EUREKA_ZONE_URL:http://${eureka.instance.hostname}:${server.port}/eureka/}
-    registerWithEureka: false
-    fetchRegistry: false
-  server:
-    enableSelfPreservation: false    
-    waitTimeInMsWhenSyncEmpty: 0
-  datacenter: Bangalore
-  environment: Development
 #Enables all Actuator endpoints meant for monitoring,
 #e.g: localhost:8181/spring-cloud-config-client/actuator/metrics
 #Exposing 17 endpoint(s) beneath base path '/actuator' - See for this message in logs after applilcation start up to ensure actuator is enabled
