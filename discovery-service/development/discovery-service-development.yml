@@ -21,7 +21,7 @@ spring:
 eureka:
   instance:
     leaseRenewalIntervalInSeconds: 30 #Not advisable to change this value since self-preservation assumes that heartbeats are always received at intervals of 30 seconds
-    leaseExpirationDurationInSeconds: 90 #Indicates the duration the server waits since it received the last heartbeat before it can evict an instance from its registry.This value should be greater than lease-renewal-interval-in-seconds.Setting this value too small could make the system intolerable to temporary network glitches.    
+    leaseExpirationDurationInSeconds: 90 #Indicates the duration the server waits since it received the last heartbeat before it can evict an instance from its registry.This value should be greater than lease-renewal-interval-in-seconds.Setting this value too small could make the system intolerable to temporary network glitches.  
     hostname: ${EUREKA_HOST:toll-platform-discovery-service}
   client:
     serviceUrl:      
